@@ -1,0 +1,20 @@
+server:
+  port: 7070
+
+spring:
+  application:
+    name: config-server
+  security:
+    user:
+      name: root
+      password: 123456
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/kn1ghthunk26-lab/microservicios.git
+          searchPaths: config-data
+          default-label: main
+          # Si el repo es privado, descomenta:
+          # username: TU_USUARIO
+          # password: TU_TOKEN_DE_GITHUB
